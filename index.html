@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winamp-Like MP3 Player</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="winamp-container">
+        <div class="winamp-display">
+            <div class="winamp-info">
+                <span id="current-track">No track playing</span>
+                <span id="current-time">00:00</span>
+            </div>
+            <canvas id="visualizer" width="300" height="100"></canvas>
+        </div>
+        <div class="winamp-controls">
+            <button id="prevBtn">Prev</button>
+            <button id="playBtn">Play</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="stopBtn">Stop</button>
+            <button id="nextBtn">Next</button>
+        </div>
+        <div class="winamp-equalizer">
+            <!-- Equalizer UI would go here -->
+        </div>
+        <div class="winamp-playlist">
+            <select id="trackSelect" class="track-select">
+                <option value="https://zkm.s3.amazonaws.com/mp3/01-Water's+Edge.mp3">Water's Edge</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/02-Sober.mp3">Sober</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/03-Pipeline.mp3">Pipeline</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/04-Studio+talk.mp3">Studio talk</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/05-My+My.mp3">My My</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/06-The+Way.mp3">The Way</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/07-Wipe+Out.mp3">Wipe Out</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/08-Knockin.mp3">Knockin</option>
+                <option value="https://zkm.s3.amazonaws.com/mp3/09-Good+Riddins.mp3">Good Riddins</option>
+            </select>
+        </div>
+    </div>
+    <audio id="audioPlayer" controls hidden>
+        <source id="audioSource" src="https://zkm.s3.amazonaws.com/mp3/01-Water's+Edge.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="/js/player.js"></script>
+</body>
+</html>
