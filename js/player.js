@@ -68,7 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
             trackSelect.selectedIndex = index;
             audioSource.src = trackSelect.value;
             audioPlayer.load();
-            audioPlayer.play();
+            if (!audioContext) {
+                initAudioContext();
+            }
+            audioPlayer.play().catch(err => {
+                console.error("Error playing audio:", err);
+            });
             updateCurrentTrack();
         }
     };
@@ -84,7 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (audioContext.state === "suspended") {
             audioContext.resume();
         }
-        audioPlayer.play();
+        audioPlayer.play().catch(err => {
+            console.error("Error playing audio:", err);
+        });
     });
 
     pauseBtn.addEventListener("click", () => audioPlayer.pause());

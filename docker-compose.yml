@@ -1,0 +1,7 @@
+services:
+  mp3-player:
+    build: .
+    ports:
+      - "8888:80"
+    restart: unless-stopped
+    container_name: html5-mp3-player

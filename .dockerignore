@@ -1,0 +1,10 @@
+node_modules/
+.git/
+.gitignore
+*.md
+audio/
+.vscode/
+.idea/
+.DS_Store
+Dockerfile
+.dockerignore
