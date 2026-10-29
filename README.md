@@ -1,5 +1,12 @@
 # HTML5 MP3 Player
 
+[![live demo](https://img.shields.io/website?url=https%3A%2F%2Fzkm.github.io%2Fhtml5-mp3-player%2F&label=live%20demo)](https://zkm.github.io/html5-mp3-player/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+![HTML5 audio](https://img.shields.io/badge/HTML5-audio-E34F26?logo=html5&logoColor=white)
+![JavaScript vanilla](https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?logo=javascript&logoColor=black)
+![Docker (nginx)](https://img.shields.io/badge/Docker-nginx-2496ED?logo=docker&logoColor=white)
+
 A modern, Winamp-inspired web-based MP3 player built with vanilla HTML5, CSS, and JavaScript. This application streams audio files from an AWS S3 bucket and features an interactive visualizer, playback controls, and a track selection dropdown.
 
 ## Table of Contents
